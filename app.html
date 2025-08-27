@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>notes - app</title>
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://use.hugeicons.com/font/icons.css" />
+</head>
+
+<body>
+  <div class="app-container">
+    <!-- header ================================  -->
+    <header class="header">
+      <div class="logo">
+        <svg class="svg-logo" xmlns="http://www.w3.org/2000/svg" width="174" height="174" viewBox="0 0 174 174">
+          <rect width="174" height="174" rx="87" fill="var(--light)" />
+          <path
+            d="M66.85 125.48c-2.37 0-4.07-.51-5.09-1.54-1.02-1.08-1.52-3.09-1.52-6.04 0-1.98.19-4.38.6-7.2.38-2.82 1.05-7.08 2.01-12.77.13-.77.65-3.88 1.54-9.33.9-5.5 1.7-11.26 2.45-17.27.64-5.12.96-8.96.96-11.52 0-2.88-1.06-4.32-3.17-4.32-1.6 0-3.62.87-6.05 2.6-2.37 1.66-4.93 4.35-7.65 8.06-.9 1.22-1.89 1.83-2.98 1.83-.9 0-1.7-.41-2.4-1.23-.64-.9-.96-1.89-.96-2.98 0-1.09.19-2.11.57-3.05.38-1.02 1.09-2.24 2.11-3.67 3.14-4.29 6.63-7.59 10.5-9.9 3.84-2.37 7.87-3.55 12.09-3.55 3.52 0 6.14 1.09 7.92 3.26 1.8 2.18 2.7 5.35 2.7 9.53 0 3.72-.52 9.1-1.55 16.11 3.25-9.49 7.34-16.67 12.26-21.55 4.93-4.93 10.73-7.4 17.38-7.4 5.25 0 9.19 1.5 11.79 4.51 2.7 2.94 4.04 6.91 4.04 11.9 0 2.82-.42 6.25-1.25 10.27l-5.86 27.46c-.64 3.2-.96 5.95-.96 8.27 0 2.69.61 4.72 1.83 6.06 1.28 1.35 3.04 2.02 5.24 2.02 2.11 0 4.16-.7 6.14-2.11 2.05-1.4 4.45-3.73 7.2-7 .77-.9 1.64-1.35 2.63-1.35.84 0 1.47.38 1.89 1.15.52.77.78 1.82.78 3.16 0 2.5-.61 4.48-1.83 5.96-3.33 4.03-6.63 6.98-9.89 8.84-3.26 1.86-6.68 2.8-10.27 2.8-5.44 0-9.7-1.6-12.76-4.82-3.07-3.26-4.61-7.6-4.61-13.05 0-2.11.16-4.42.48-6.91.38-2.49.99-5.66 1.83-9.51l3.84-17.57c.13-.58.35-1.61.67-3.05.32-1.45.58-2.82.77-4.09.19-1.35.29-2.66.29-3.96 0-2.05-.58-3.67-1.73-4.88-1.15-1.22-2.78-1.83-4.89-1.83-3.84 0-7.68 2.05-11.51 6.14-3.84 4.1-7.39 10.74-10.65 19.95-3.26 9.1-5.82 20.75-7.68 34.96-.45 3.26-1.12 5.52-2.02 6.82-.83 1.28-2.5 1.92-4.95 1.92Z"
+            fill="var(--dark)" />
+        </svg>
+        <span>Notes</span>
+      </div>
+      <nav class="navigation">
+        <button class="nav-item active-item section-btn" data-section="home-section">
+          <span>home</span>
+        </button>
+        <button class="nav-item section-btn" data-section="notes-section">
+          <span>notes</span>
+        </button>
+        <button class="add-btn section-btn" data-section="add-section">
+          <i class="hgi hgi-stroke hgi-plus-sign"></i>
+          create
+        </button>
+      </nav>
+      <button class="menu-btn">
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <!-- main content ================================  -->
+    <main class="main">
+      <section class="section add-section">
+        <div class="div-status">
+         note added
+        </div>
+        <div class="form">
+          <h1>Add new note</h1>
+          <div class="form-inputs">
+            <input class="input" id="title-input" type="text" placeholder="title" />
+            <select class="input" id="select">
+              <option value="personal">personal</option>
+              <option value="business">business</option>
+              <option value="idea">idea</option>
+            </select>
+            <textarea class="input textarea" id="note-input" placeholder="your note .."></textarea>
+            <input class="input add-btn" id="add-btn" type="submit" value="Add" />
+          </div>
+        </div>
+      </section>
+      <section class="section home-section active-section">
+        <h1>Notes App</h1>
+        <div class="home-cards">
+          <div class="card">
+            <p class="card-title">
+              <i class="hgi hgi-stroke hgi-favourite"></i>
+              <span>Personal</span>
+            </p>
+            <p class="card-desc">
+              Keep your daily thoughts, reminders, and personal ideas.
+            </p>
+          </div>
+          <div class="card">
+            <p class="card-title">
+              <i class="hgi hgi-stroke hgi-tie"></i>
+              <span>Business</span>
+            </p>
+            <p class="card-desc">
+              Organize work tasks, meetings, and project notes.
+            </p>
+          </div>
+          <div class="card">
+            <p class="card-title">
+              <i class="hgi hgi-stroke hgi-ai-idea"></i>
+              <span>ideas</span>
+            </p>
+            <p class="card-desc">
+              Capture creative ideas anytime for brainstorming or projects.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section notes-section">
+        <div class="notes-cards">
+         
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
